@@ -12,34 +12,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import cst.unitbvfmi2026.ui.screens.LogInScreen
 import cst.unitbvfmi2026.ui.theme.UnitBvFMI2026Theme
-
-enum class Colors(id: Int, nameResId: Int) {
-	RED(0, R.string.red),
-	YELLOW(1, R.string.yellow),
-	GREEN(2, R.string.green)
-}
-
-object ClassUser {
-	private val name: String = "John"
-	public var name2: String? = null
-
-	val nameL: String by lazy {
-		"ss"
-	}
-
-	lateinit var nameI: String
-
-	fun playWithNames() {
-		nameI = name2?.let {
-			"Do something"
-		} ?: "Do something else"
-
-		nameL.length
-
-		nameI.length
-	}
-}
 
 class MainActivity : ComponentActivity() {
 	override fun onCreate(savedInstanceState: Bundle?) {
@@ -48,10 +22,11 @@ class MainActivity : ComponentActivity() {
 		setContent {
 			UnitBvFMI2026Theme {
 				Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-					Greeting(
-						name = "Android",
-						modifier = Modifier.padding(innerPadding)
-					)
+//					Greeting(
+//						name = "Android",
+//						modifier = Modifier.padding(innerPadding)
+//					)
+					LogInScreen(modifier = Modifier.padding(innerPadding))
 				}
 			}
 		}
